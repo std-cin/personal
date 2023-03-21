@@ -26,6 +26,9 @@ if string.find(bedwarsstrings, game.PlaceId) then
             end
         end
     end)
+    sethiddenproperty(game:WaitForChild("Lighting"), "Technology", "Compatibility")
+	game:WaitForChild("Lighting").GlobalShadows = true
+	game.Lighting.ClockTime = 14
 else
     game:GetService("StarterGui"):SetCore("SendNotification",{
         Title = "Loaded successfully!",
