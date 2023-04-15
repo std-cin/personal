@@ -1,11 +1,11 @@
 repeat task.wait() until game:IsLoaded()
-local bedwarsstrings = {6872274481, 8444591321, 6872265039, 8560631822}
-local function runFunction(func()
+local bedwarsid = {6872274481, 8444591321, 6872265039, 8560631822}
+local function runFunction(func)
     func()
-end)
+end
 
 
-if string.find(bedwarsstrings, game.PlaceId) then
+if table.find(bedwarsid, game.PlaceId) then
     game:GetService("StarterGui"):SetCore("SendNotification",{
         Title = "Loaded successfully!",
         Text = "Sown's Bedwars Stuff has been loaded successfully!",
@@ -18,8 +18,8 @@ if string.find(bedwarsstrings, game.PlaceId) then
             for i, str in pairs(strings) do
                 if string.find(v.DisplayName or v.Name, str) then
                     game:GetService("StarterGui"):SetCore("SendNotification",{
-                        Title = "Notification Title",
-                        Text = "Notification Description",
+                        Title = "HackerDetector",
+                        Text = v.DisplayName.."(@"..v.Name..") might be cheating!",
                         Duration = 10
                     })
                 end
