@@ -1,3 +1,3 @@
 **Personal Scripts**
 
-Use them if u want lol
+My own scripts that are very poorly made but usable ig
